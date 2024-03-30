@@ -28,7 +28,16 @@ public class TestUtil {
     boolean answer = new Util().compute(8,10,0);
     fail();
   	}
-  	catch(RuntimeException e){}
-  	
+  	catch(RuntimeException e){
+  	}
   }
+  @Test
+  public void sumModTrue() { 
+  	assertTrue(new Util().compute(8,10,2));
+  }
+  @Test
+  public void sumModFalse() { 
+  	assertFalse(new Util().compute(8,10,5));
+  }
+  
 }
