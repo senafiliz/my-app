@@ -13,4 +13,22 @@ public class TestUtil {
 
   @Test
   public void example() { assertTrue(true); }
+  
+  @Test
+  public void argEquals1() { 
+  	assertFalse(new Util().compute(8)); 
+  }
+  @Test
+  public void argEven() { 
+  	assertFalse(new Util().compute(8,10)); 
+  }
+  @Test
+  public void argHas0() { 
+  	try {
+    boolean answer = new Util().compute(8,10,0);
+    fail();
+  	}
+  	catch(RuntimeException e){}
+  	
+  }
 }
